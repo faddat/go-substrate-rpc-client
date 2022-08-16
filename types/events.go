@@ -2422,14 +2422,24 @@ type EventProxyAnonymousCreated struct {
 	Topics              []Hash
 }
 
-// EventProxyAdded is emitted when a proxy was added.
-type EventProxyAdded struct {
+// EventProxyProxyAdded is emitted when a proxy was added.
+type EventProxyProxyAdded struct {
 	Phase     Phase
 	Delegator AccountID
 	Delegatee AccountID
 	ProxyType ProxyType
 	Delay     U32
 	Topics    []Hash
+}
+
+// EventProxyProxyRemoved is emitted when a proxy was removed.
+type EventProxyProxyRemoved struct {
+	Phase       Phase
+	Delegator   AccountID
+	Delegatee   AccountID
+	ProxyType   ProxyType
+	BlockNumber U32
+	Topics      []Hash
 }
 
 // EventProxyAnnounced is emitted when an announcement was placed to make a call in the future
@@ -2564,6 +2574,14 @@ type EventTransactionStorageRenewed struct {
 type EventTransactionStorageProofChecked struct {
 	Phase  Phase
 	Topics []Hash
+}
+
+type EventTransactionPaymentTransactionFeePaid struct {
+	Phase     Phase
+	Who       AccountID
+	ActualFee U128
+	Tip       U128
+	Topics    []Hash
 }
 
 // EventTipsTipRetracted is emitted when a tip suggestion has been retracted.
