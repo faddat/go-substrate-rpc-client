@@ -16,7 +16,12 @@ type IdentifiedClientState struct {
 	ClientState *prototypes.Any `protobuf:"bytes,2,opt,name=client_state,json=clientState,proto3" json:"client_state,omitempty" yaml:"client_state"`
 }
 
-func parseIdentifiedClientStates(ics IdentifiedClientStates) (clienttypes.IdentifiedClientStates, error) {
+func parseIdentifiedClientStates(
+	ics IdentifiedClientStates,
+) (
+	clienttypes.IdentifiedClientStates,
+	error,
+) {
 	var clientStates clienttypes.IdentifiedClientStates
 	for i := 0; i < len(ics); i++ {
 		cs, err := parseAny(ics[i].ClientState)
@@ -41,7 +46,12 @@ type QueryClientStateResponse struct {
 	ProofHeight clienttypes.Height `protobuf:"bytes,3,opt,name=proof_height,json=proofHeight,proto3" json:"proof_height"`
 }
 
-func parseQueryClientStateResponse(csr QueryClientStateResponse) (clienttypes.QueryClientStateResponse, error) {
+func parseQueryClientStateResponse(
+	csr QueryClientStateResponse,
+) (
+	clienttypes.QueryClientStateResponse,
+	error,
+) {
 	cs, err := parseAny(csr.ClientState)
 	if err != nil {
 		return clienttypes.QueryClientStateResponse{}, err
@@ -56,6 +66,7 @@ func parseQueryClientStateResponse(csr QueryClientStateResponse) (clienttypes.Qu
 
 type QueryConsensusStateResponse struct {
 	// consensus state associated with the client identifier at the given height
+	// nolint
 	ConsensusState *prototypes.Any `protobuf:"bytes,1,opt,name=consensus_state,json=consensusState,proto3" json:"consensus_state,omitempty"`
 	// merkle proof of existence
 	Proof []byte `protobuf:"bytes,2,opt,name=proof,proto3" json:"proof,omitempty"`
