@@ -3,7 +3,6 @@ module github.com/ComposableFi/go-substrate-rpc-client/v4
 go 1.18
 
 require (
-	github.com/ComposableFi/go-subkey/v2 v2.0.0-tm03420
 	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-a53e38424cce
 	github.com/cosmos/cosmos-sdk v0.46.0
 	github.com/cosmos/ibc-go/v5 v5.0.0-beta1
@@ -16,6 +15,7 @@ require (
 	github.com/pierrec/xxHash v0.1.5
 	github.com/rs/cors v1.8.2
 	github.com/stretchr/testify v1.8.0
+	github.com/vedhavyas/go-subkey/v2 v2.0.0
 	golang.org/x/crypto v0.0.0-20220817201139-bc19a97f63c8
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce
 )
@@ -26,7 +26,7 @@ require (
 	filippo.io/edwards25519 v1.0.0-rc.1 // indirect
 	github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 // indirect
 	github.com/99designs/keyring v1.2.1 // indirect
-	github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d // indirect
+	github.com/ChainSafe/go-schnorrkel v1.0.0 // indirect
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/armon/go-metrics v0.4.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
