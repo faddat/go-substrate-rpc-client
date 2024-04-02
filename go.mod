@@ -5,7 +5,6 @@ go 1.21
 toolchain go1.22.1
 
 require (
-	github.com/ComposableFi/go-subkey/v2 v2.0.0-tm03420
 	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-a53e38424cce
 	github.com/cosmos/cosmos-sdk v0.46.16
 	github.com/cosmos/ibc-go/v6 v6.2.1
@@ -18,6 +17,7 @@ require (
 	github.com/pierrec/xxHash v0.1.5
 	github.com/rs/cors v1.8.2
 	github.com/stretchr/testify v1.8.4
+	github.com/vedhavyas/go-subkey/v2 v2.0.0
 	golang.org/x/crypto v0.17.0
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce
 )
