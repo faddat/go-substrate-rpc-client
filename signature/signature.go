@@ -22,8 +22,8 @@ import (
 	"os"
 	"strconv"
 
-	subkey "github.com/ComposableFi/go-subkey/v2"
-	"github.com/ComposableFi/go-subkey/v2/sr25519"
+	subkey "github.com/vedhavyas/go-subkey/v2"
+	"github.com/vedhavyas/go-subkey/v2/sr25519"
 	"golang.org/x/crypto/blake2b"
 )
 
